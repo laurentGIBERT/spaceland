@@ -239,7 +239,149 @@ class Plant
     {
         return $this->description;
     }
+    /**
+     * Set if the plant
+     * is enable.
+     *
+     * @param bool $enabled
+     */
+    public function setEnabled($enabled)
+    {
+        $this->enabled = $enabled;
+    }
 
+    /**
+     * Is the plant enabled?
+     *
+     * @return bool
+     */
+    public function getEnabled()
+    {
+        return $this->enabled;
+    }
+
+    /**
+     * Alias of getEnabled.
+     *
+     * @return bool
+     */
+    public function isEnabled()
+    {
+        return $this->getEnabled();
+    }
+
+    /**
+     * Set the list of features.
+     * The parameter is an associative array (key as type, value as data.
+     *
+     * @param array $features
+     */
+    public function setFeatures($features)
+    {
+        $this->features = $features;
+    }
+
+    /**
+     * Get all plant features.
+     *
+     * @return array
+     */
+    public function getFeatures()
+    {
+        return $this->features;
+    }
+
+    /**
+     * @param File $image
+     */
+    public function setImageFile(File $image = null)
+    {
+        $this->imageFile = $image;
+    }
+
+    /**
+     * @return File
+     */
+    public function getImageFile()
+    {
+        return $this->imageFile;
+    }
+
+    /**
+     * @param string $image
+     */
+    public function setImage($image)
+    {
+        $this->image = $image;
+    }
+
+    /**
+     * @return string
+     */
+    public function getImage()
+    {
+        return $this->image;
+    }
+
+    /**
+     * Set the plant name.
+     *
+     * @param string $name
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
+
+    /**
+     * Retrieve the name of the plant.
+     *
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * Set the price.
+     *
+     * @param float $price
+     */
+    public function setPrice($price)
+    {
+        $this->price = $price;
+    }
+
+    /**
+     * Get the price of the plant.
+     *
+     * @return float
+     */
+    public function getPrice()
+    {
+        return $this->price;
+    }
+
+    /**
+     * Set the list of the tags.
+     *
+     * @param \string[] $tags
+     */
+    public function setTags($tags)
+    {
+        $this->tags = $tags;
+    }
+
+    /**
+     * Get the list of tags associated to the plant.
+     *
+     * @return \string[]
+     */
+    public function getTags()
+    {
+        return $this->tags;
+    }
 
 
 
