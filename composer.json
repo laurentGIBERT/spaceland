@@ -46,15 +46,16 @@
 		"symfony/form": "4.0.5",
 		"symfony/framework-bundle": "4.0.5",
 		"symfony/lts": "^4@dev",
-		"symfony/maker-bundle": "^1.1",
+		"symfony/maker-bundle": "^1.2",
 		"symfony/monolog-bundle": "3.1.2",
-		"symfony/orm-pack": "1.0.5",
+		"symfony/orm-pack": "^1.0",
 		"symfony/security-bundle": "4.0.5",
 		"symfony/serializer": "4.0.5",
 		"symfony/twig-bundle": "4.0.5",
 		"symfony/validator": "4.0.5",
 		"symfony/web-profiler-bundle": "4.0.5",
-		"symfony/yaml": "4.0.5"
+		"symfony/yaml": "4.0.5",
+		"vich/uploader-bundle": "^1.8"
 	},
 	"require-dev": {
 		"codedungeon/phpunit-result-printer": "0.6.0",
