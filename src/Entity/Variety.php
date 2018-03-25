@@ -15,7 +15,7 @@ use Doctrine\ORM\Mapping as ORM;
  *
  * @author Laurent GIBERT
  *
- * @ORM\Table(name="category")
+ * @ORM\Table(name="variety")
  * @ORM\Entity
  */
 class Variety
@@ -31,7 +31,7 @@ class Variety
     protected $id = null;
 
     /**
-     * The category name.
+     * The variety name.
      *
      * @var string
      * @ORM\Column(type="string")
@@ -39,10 +39,10 @@ class Variety
     protected $name;
 
     /**
-     * Plant in the category.
+     * Plant in the variety.
      *
      * @var Plant[]
-     * @ORM\ManyToMany(targetEntity="Plant", mappedBy="categories")
+     * @ORM\ManyToMany(targetEntity="Plant", mappedBy="varieties")
      **/
     protected $plants;
 
@@ -66,8 +66,8 @@ class Variety
     }
 
     /**
-     * Get the id of the category.
-     * Return null if the category is new and not saved.
+     * Get the id of the variety.
+     * Return null if the variety is new and not saved.
      *
      * @return int
      */
@@ -77,7 +77,7 @@ class Variety
     }
 
     /**
-     * Set the name of the category.
+     * Set the name of the variety.
      *
      * @param string $name
      */
@@ -87,7 +87,7 @@ class Variety
     }
 
     /**
-     * Get the name of the category.
+     * Get the name of the variety.
      *
      * @return string
      */
@@ -96,28 +96,9 @@ class Variety
         return $this->name;
     }
 
-    /**
-     * Set the parent category.
-     *
-     * @param Variety $parent
-     */
-    public function setParent($parent)
-    {
-        $this->parent = $parent;
-    }
 
     /**
-     * Get the parent category.
-     *
-     * @return Variety
-     */
-    public function getParent()
-    {
-        return $this->parent;
-    }
-
-    /**
-     * Return all plant associated to the category.
+     * Return all plant associated to the variety.
      *
      * @return Plant[]
      */
@@ -127,7 +108,7 @@ class Variety
     }
 
     /**
-     * Set all plants in the category.
+     * Set all plants in the variety.
      *
      * @param Plant[] $plants
      */
