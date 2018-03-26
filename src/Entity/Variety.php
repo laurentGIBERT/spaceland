@@ -13,7 +13,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Class Variety.
  *
- * @author Laurent GIBERT
+ * @author 'Laurent GIBERT'
  *
  * @ORM\Table(name="variety")
  * @ORM\Entity

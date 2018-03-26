@@ -16,7 +16,9 @@ use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 
 class Plant
-{/**
+{
+
+ /**
  * The identifier of the plant.
  *
  * @var int

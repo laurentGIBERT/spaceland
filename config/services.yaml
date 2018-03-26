@@ -2,6 +2,8 @@
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
     locale: 'en'
+    app.path.plant_images: /uploads/images/plants
+    app.path.user_contracts: /uploads/files/user/contracts
 
 services:
     # default configuration for services in *this* file

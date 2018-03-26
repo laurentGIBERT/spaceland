@@ -4,6 +4,8 @@ declare(strict_types = 1);
  * /src/Entity/User.php
  *
  * @author  TLe, Tarmo Leppänen <tarmo.leppanen@protacon.com>
+ * and Laurent GIBERT
+ *
  */
 namespace App\Entity;
 
@@ -38,9 +40,9 @@ use Symfony\Component\Validator\Constraints as Assert;
  *  )
  *
  * @package App\Entity
- * @author  TLe, Tarmo Leppänen <tarmo.leppanen@protacon.com>
+ * @author  TLe, Tarmo Leppänen <tarmo.leppanen@protacon.com> and Laurent GIBERT
  */
-class User implements CoreUserInterface, EquatableInterface, \Serializable, EntityInterface, UserInterface
+abstract class User implements CoreUserInterface, EquatableInterface, \Serializable, EntityInterface, UserInterface
 {
     // Traits
     use Blameable;
@@ -169,6 +171,15 @@ class User implements CoreUserInterface, EquatableInterface, \Serializable, Enti
      */
     private $plainPassword = '';
 
+
+    /**
+     * The creation date of the user.
+     *
+     * @var \DateTime
+     * @ORM\Column(type="datetime", name="created_at")
+     */
+    private $createdAt = null;
+
     /**
      * User constructor.
      */
@@ -179,6 +190,8 @@ class User implements CoreUserInterface, EquatableInterface, \Serializable, Enti
         $this->userGroups = new ArrayCollection();
         $this->logsRequest = new ArrayCollection();
         $this->logsLogin = new ArrayCollection();
+        $this->createdAt = new ArrayCollection();
+
     }
 
     /**
