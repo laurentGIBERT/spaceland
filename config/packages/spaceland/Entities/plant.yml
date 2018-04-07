@@ -18,7 +18,7 @@ spaceland:
                     - name
                     - { property: 'price', format: '%.2f', css_class: text-right }
                     - { property: 'ean', type: 'string' }
-                    - { property: 'image', type: 'image', base_path: '%app.path.product_images%' }
+                    - { property: 'image', type: 'image', base_path: '%app.path.plant_images%' }
                     - { property: 'createdAt', format: 'j / M / Y' }
                     - tags
             show:
@@ -30,7 +30,7 @@ spaceland:
                     - createdAt
                     - price
                     - { property: 'ean', type: 'string' }
-                    - { property: 'image', type: 'image', base_path: '%app.path.product_images%' }
+                    - { property: 'image', type: 'image', base_path: '%app.path.plant_images%' }
                     - features
                     - categories
                     - tags
@@ -40,8 +40,8 @@ spaceland:
                     - { property: 'name', css_class: 'large' }
                     - { property: 'description', type: 'ckeditor' }
                     - { type: 'divider' }
-                    - { property: 'categories', type: 'easyadmin_autocomplete' }
-                    - { type: 'group', css_class: 'col-sm-4', label: 'Product Details', icon: 'cube' }
+                    - { property: 'species', type: 'easyadmin_autocomplete' }
+                    - { type: 'group', css_class: 'col-sm-4', label: 'Plant Details', icon: 'cube' }
                     - { property: 'ean', help: 'EAN-13 valid code. Leave empty if unknown.' }
                     - { property: 'price', type: 'number' }
                     - { type: 'section', label: 'Advanced Settings', icon: 'warning', help: 'Reserved for administrators use' }

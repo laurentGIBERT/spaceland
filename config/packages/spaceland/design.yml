@@ -8,8 +8,8 @@
 #
 # The configuration options are explained in detail in the bundle documentation,
 # which is published at https://github.com/javiereguiluz/EasyAdminBundle
-easy_admin:
-    site_name: 'ACME Backend'
+spaceland:
+    site_name: 'SpaceLand Backend'
     design:
         form_theme:   'vertical'
         color_scheme: 'dark'

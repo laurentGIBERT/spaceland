@@ -1,0 +1,24 @@
+# This file sets the configuration of the 'Gardener' entity.
+#
+
+easy_admin:
+    entities:
+        User:
+            class: App\Entity\Gardener
+            list:
+                title: 'Gardeners'
+                actions: ['-new']
+                fields: ['id', 'active', 'username', 'email', 'purchases', { property: 'contract', template: 'contract.html.twig', base_path: '%app.path.user_contracts%' }]
+            show:
+                fields: ['id', 'isActive', 'username', 'email', 'purchases', { property: 'contract', template: 'contract.html.twig', base_path: '%app.path.user_contracts%' }]
+            form:
+                fields:
+                    - { type: 'group', label: 'Account Information', icon: 'user', css_class: 'col-sm-4' }
+                    - { property: 'username' }
+                    - { property: 'isActive' }
+                    - { type: 'group', label: 'Contact Information', icon: 'envelope-o', css_class: 'col-sm-4' }
+                    - { property: 'email' }
+                    - { type: 'group', label: 'Legal Information', icon: 'briefcase', css_class: 'col-sm-4' }
+                    - { property: 'contractFile', type: 'Vich\UploaderBundle\Form\Type\VichFileType' }
+                    - { type: 'group', label: 'Transactions History', icon: 'money', css_class: 'col-sm-12' }
+                    - { property: 'purchases', css_class: 'col-sm-12' }

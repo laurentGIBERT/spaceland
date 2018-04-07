@@ -1,0 +1,11 @@
+symfony-flex-backend:
+        entities:
+            - App\Entity\Plant
+            - App\Entity\Plot
+            - App\Entity\User
+            - App\Entity\Gardener
+            - App\Entity\Seed
+            - App\Entity\Specie
+            - App\Entity\Variety
+
+
